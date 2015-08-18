@@ -1,0 +1,16 @@
+{
+    "name": "ilune/stringtools",
+    "description": "Just some classes used to manage strings/files",
+    "homepage": "https://github.com/Ilune/Stringtools",
+    "keywords": ["file", "string"],
+    "license": "LGPL",
+    "authors": [
+        {
+            "name": "Jérôme",
+            "homepage": "https://github.com/Ilune"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    }
+}
