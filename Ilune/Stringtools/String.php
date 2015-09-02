@@ -35,6 +35,15 @@ class String {
 		$this->string = html_entity_decode($this->string,ENT_NOQUOTES,'UTF-8');
 		return $this;
 	}
+        /**
+         * decode html entities
+         * @return \Ilune\Stringtools\String
+         */
+	function htmlEntityEncode() 
+	{
+		$this->string = htmlentities($this->string,'UTF-8',ENT_NOQUOTES);
+		return $this;
+	}
 
         /**
          * remove tags
@@ -151,6 +160,25 @@ class String {
 		$this->string = preg_replace('@\'|’|,|/|:|\.|;|-|\(|\)|#|«|»|\[|\]@i',' ',$this->string);
 		return $this;
 	}
+        
+        /**
+         * just concat a string to current
+         * @param string $string
+         * @return \Ilune\Stringtools\String
+         */
+        function concat($string) 
+        {
+            $this->string = $this->string.$string;
+            return $this;
+        }
+        
+        /**
+         * just check if the string is all uppercase
+         * @return boolean
+         */
+        function checkIfUpperCase() {
+            return (strtoupper($this->string) === $this->string) ;
+        }
 
 }
 
