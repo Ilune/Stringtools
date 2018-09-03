@@ -188,6 +188,11 @@ class String {
         function checkIfUpperCase() {
             return (strtoupper($this->string) === $this->string) ;
         }
+    function cleanup()
+    {
+        $this->string = preg_replace('@[^a-zA-Z0-9_\-\ éèêëÉÈÊËàâäÂÀÄîïÎÏûùüÛÜô…ö\&°Ô%ÖçÇñŒœ\@\.,\!+\?\=\'\"\(\)\:\;®’\/»«\[\]]@u','',$this->string);
+        return $this;
+    }
 
 }
 
