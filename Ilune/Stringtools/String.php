@@ -46,6 +46,15 @@ class String {
 	}
 
         /**
+         * 
+         * @return \Ilune\Stringtools\String
+         */
+        function removeStyleAttribute() 
+        {
+            $this->string = preg_replace('/(<[^>]+) style=".*?"/i', '$1', $this->string);
+            return $this;
+        }
+        /**
          * remove tags
          * @return \Ilune\Stringtools\String
          */
