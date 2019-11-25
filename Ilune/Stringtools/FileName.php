@@ -11,9 +11,9 @@
  */
 
 namespace Ilune\Stringtools;
-use Ilune\Stringtools\String;
+use Ilune\Stringtools\Stringtool;
 
-class FileName extends String {
+class FileName extends Stringtool {
     
     /**
      * remove special chars in file name (keep extension )
@@ -27,7 +27,7 @@ class FileName extends String {
         }
         $rpos = strrpos($this->string, '.');
         $base = substr($this->string,0,$rpos);
-        $base = new String($base);
+        $base = new Stringtool($base);
         $base->removeSpecialChars($exception,$default);
         $this->string = $base.substr($this->string,$rpos);
         return $this;
