@@ -11,7 +11,7 @@
 
 namespace Ilune\Stringtools;
 
-class String {
+class Stringtool {
 	protected $string;
         /**
          * @param string $string
